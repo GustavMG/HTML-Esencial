@@ -1,0 +1,128 @@
+/* Estilos principales de la pagina*/
+body{
+    color: black;
+    font-family: 'Bebas Neue', sans-serif; /*Aqui pegué el CSS rules to specify families de Google Font para poder usar la fuente*/
+}
+/*
+    Este es un comentario grande
+    */
+
+    h1,h2,h3,h4,h5,h6{
+        margin: 10px;
+    }
+
+    .texto-resaltado{ /*Esto se esta aplicando especificamente en enlaces_internos.html*/
+        color: aqua; /*Color de la fuente*/
+        font-weight: 700;
+        font-size: 22px; /*Tamaño de la fuente*/
+        font-family: Arial, Helvetica, sans-serif; /*Tipo de la fuente a utilizar*/
+    }
+
+    a{/*Esto se esta aplicando en las etiquetas del index*/
+        color: grey;    /*Estoy colocando en color gris TODOS los enlaces que tengas la etiqueta a y no tengas id o class*/
+        text-decoration: none; /*Esto es para que no tengas decoración, es decir en ESTE CASO que NO tengas el subrayado, aunque asi no se nota que sea un enlace*/
+        border: none; /*En algunos navegadores antiguos los enlaces como imagenes aparecen con un borde asi que con esta propiedad quitamos el borde en dado caso que se presente, esto vendría siendo mas por presentación*/
+    }
+
+    /*Puedo hacer referencia a los distintos estados de un enlace*/
+    a:hover{ /*Aqui le estamos aplicando un estilo de que hacer cuando se presente el hover, es decir cuando pasen sobre el enlace*/
+        color: gold;
+    }
+
+    #contens{
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: azure;
+    }
+
+    .bloque-dcha{
+        display: inline-block;
+        /*float: right;*/
+        width: 40%;
+    }
+
+    .bloque-izda{
+        display: inline-block;
+        /*float: left;*/
+        /*position: absolute; /*Hace que se coloque en una posición absoluta sin importar lo que haya en ese lugar, se va a sobre poner*/
+        /*top: 0px; /*top, left, right, botton me sirven para posicionar mi bloque en algun lugar en especifico de la pagina*/
+        /*left: 0px;*/
+        width: 40%;
+    }
+    /*Utilizando float lo posiciona y lo que va despues ignora estos bloques y se pone en encuadre, no se ve bien*/
+
+    ul{
+        list-style: none; /*Aqui le estoy quitando el estilo, es decir las bolitas que tiene por defecto al ser lista*/
+        padding: 10px; /*Aqui estoy modificando la distancia del tabulador que tiene por defecto*/
+    }
+
+    nav ul{/*Aqui le estoy diciendo a todas las etiquetas nav que tengan listas ul que se le aplique el estilo*/
+        padding-left: 0px;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color: brown;
+    }
+
+    nav.horizontal ul li{/*Para hacer que haya un selector que tenga una clase aplicada se pone un . y el nombre de la clase seguido*/
+        display: inline-block; /*Asi puedo tener el menu horizontal de la tabla*/
+    }
+
+    #imagen_fondo{  /*Aqui estoy usando la imagen como fondo*/
+        width: 600px;   /*Aqui estoy dandole las medidas de alto y ancho para la imagen*/
+        height: 600px;
+        background-image: url(./assets/fondo.jpeg); /*Aqui estoy seleccionando la ruta de la imagen*/
+        background-repeat: repeat;  /*Puedo aqui definir como se repita la imagen, esto si la imagen es pequeña y sale varias veces para rellenar el espacio*/
+        background-position: 35px;  /*Aqui puedo mover la imagen de acuerdo a mi convenencia*/
+    }
+
+    #contenedor-icono svg{
+        font-size: xx-small;
+        color: brown;
+    }
+
+    table, td, th{
+        border: 1px solid black; /*boder-collapse: collapse para que no aparezan dobles lineas en los bordes*/
+        text-align: center; /*Estoy centrando el contenido dentro de las tablas*/
+    }
+
+    table{
+        width: 80%;
+        margin: 0 auto; /*Estoy centrando la tabla*/
+        background-color: silver; /*Le doy color de fondo a la tabla completa*/
+    }
+
+    td{
+        background-color: blueviolet; /*Le doy color de fondo SOLO al contenido de la tabla*/
+    }
+
+    td, th{ /*Le estoy dando un padding a las columnas de los encabezados y el cuerpo de la  tabla*/
+        padding: 4px;
+    }
+
+    iframe{
+        border: 1px solid black;
+    }
+
+    fieldset{
+        border: 1px solid black;
+    }
+
+    textarea{
+        resize: none;
+        width: 100%;
+        height: 120px;
+    }
+
+    label{
+        width: 130px;
+        display: inline-block;
+        margin-bottom: 0px;
+        margin-top: 8px;
+    }
+
+    canvas, object{
+        border: 1px solid black;
+    }

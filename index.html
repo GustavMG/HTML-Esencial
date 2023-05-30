@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Esta meta es para definir como se va escalar y mostrar la pagina de acuerdo al dispositivo en que se esta visualizando, pc, tablet, celular, etc. Esta etiqueta se trabaja en conjunto con elementos CSS-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title> PRUEBA GMG HTML </title>
+
+    <!--Aqui estoy añadiendo una fuente de Google Font para probar-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!--Aqui termino de añadir fuente-->
+
+    <!--Aqui estoy añadiendo la conexión para los estilos en mi archivo .css-->
+    <link href="estilos.css" rel="stylesheet" />
+    <!--Aqui termino de añadir fuente-->
+
+    
+    <!--Aqui estoy añadiendo un icono-->
+    <link href="./assets/desarrollo-movil.ico" rel="icon" />
+    <!--Aqui termino de añadir icono-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+
+</head>
+
+<body onload="saluda()">
+
+    <header>
+        <nav class="horizontal">
+            <!--Esta etiqueta sirve para los menus de navegación, estos elementos van a ser enumeraciones del mismo tipo por lo que es bueno que estos menus de navegacion esten compuestos por listas desordenadas-->
+            <ul><!--Se le añadirá un estilo a las etiquetas NAV para mantener un formato como buena practica-->
+                <li><a href="http://google.com">Google</a></li>
+                <li><a href="http://w3c.com">W3C</a></li>
+                <li><a href="http://yahoo.com">YAHOO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+        <!--<aside> sirve para poner barras laterales en las que solemos añadir barras de navegación o banners, información para tareas secundarias-->
+        <nav role="navigation">
+            <ul>
+                <li><a #>uno</a></li>
+                <!--Aqui estoy agregando el # para que al hacer clic sobre el no mande a ningun lado, esto se utiliza en JS para hacer que haya elementos activos pero que No funcionen como enlaces-->
+                <li><a #>dos</a></li>
+                <li><a #>tres</a></li>
+            </ul>
+        </nav>
+        <!--<nav> <nav> representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.-->
+    </aside>
+
+    <div id="contens">
+        <section>
+            <!--<section> aquí nos guarda los contenidos de la pagina, se puede tener varias secciones y en las secciones se tienen varios articulos-->
+            <h1>Organizando contenidos</h1>
+            <article>
+                <!--Sirve para colocar información mas importante de la página o articulos, NO todo se pone dentro de estas etiquetas, esta etiqueta tiene dentro un titulo, un parrafo y demás etiquetas de diseño, LA VITAL IMPORTANCIA es que el SEO le da mas importancia a por ejemplo un div que contiene información-->
+                <h2>Agrupando contenidos con div</h2>
+                <div class="bloque-dcha">
+                    <p>Quibusdam sempiternum a pariatur. Expetendis id quorum singulis, quorum
+                        mandaremus ut varias minim, ubi labore appellat vidisse, se dolore amet anim
+                        occaecat, ubi ea relinqueret aut incididunt familiaritatem de excepteur ea
+                        tempor velit aliquip, iudicem aute mentitum offendit. O quibusdam concursionibus
+                        te ne magna aut velit non si qui illustriora, singulis velit officia mentitum,
+                        se ne quae quamquam de quem ita incurreret in nam aute tamen ea incurreret,
+                        aliqua coniunctione laborum summis appellat. Arbitror distinguantur o
+                        expetendis. Qui iis cillum veniam eram e eu aliqua id nulla. Consequat et eram,
+                        appellat ne occaecat te nam quamquam a ullamco nam est possumus de senserit in
+                        laborum quem senserit, tempor minim nostrud, varias id qui anim incididunt,
+                        appellat a incurreret. Aliqua cohaerescant litteris minim nescius, non aute eu
+                        varias an an mentitum ex eiusmod quo expetendis sint fore si quem, sunt
+                        cernantur eu efflorescere te nostrud ipsum arbitror nescius, incurreret sunt
+                        anim nam nulla hic ipsum appellat ea quae nisi.</p>
+                </div>
+                <div class="bloque-izda">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quae est debitis quia eveniet modi
+                    alias laboriosam dignissimos animi et id deleniti corporis molestias nemo iste, saepe, illum
+                    laudantium tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure perspiciatis
+                    facere tempora quia accusamus obcaecati ducimus hic eum, magni atque ad culpa dicta accusantium
+                    exercitationem, reiciendis labore rerum magnam animi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere maxime quasi eum, esse repellendus
+                    reiciendis vitae officia sunt quidem ab voluptate, similique illum magnam omnis amet fugit
+                    temporibus sequi tenetur.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae quidem distinctio quasi
+                    dolorum corporis, laudantium ea accusamus velit iure, voluptate alias quisquam sint! Quisquam beatae
+                    ullam est consequatur repudiandae.
+                </div>
+                <div>Div con poco texto</div>
+            </article>
+        </section>
+
+        <section>
+            <h2>Listas en HMTL</h2>
+            <h3>Lista desordenada</h3>
+            <!--Estas listas tienen un tabulador o padding por defecto, se pued observar visualmente en el navegador-->
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Lista anidada <!--Me permite colocar un texto como "titulo" de la lista-->
+                    <ul>
+                        <li> elem. 1</li>
+                        <!--Estas listas tambien tiene un tabulador por defecto, se pued eobservar visualmente en el navegador-->
+                        <li> elem. 2</li>
+                        <li> elem. 3</li>
+                    </ul>
+                </li>
+                <li>Elemento 5</li>
+                <li>Elemento 4</li>
+                <li>Elemento 3</li>
+            </ul>
+
+            <h3>Listas ordenadas</h3>
+            <ol type="a"> <!--Aqui puedo seleccionar el tipo viñeta a utilizar como numeros o letras-->
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>
+                    <ol type="i" start="3" reversed>
+                        <!--Puede darle la opcion de iniciar desde un punto, por ejemplo aqui en 3 en lugar de 1, puedo usarse reverse para invertir el orden-->
+                        <li>Elemento A</li>
+                        <li>Elemento B</li>
+                        <li>Elemento C</li>
+                    </ol>
+                </li>
+                <li>Elemento 5</li>
+                <li>Elemento 4</li>
+                <li>Elemento 3</li>
+            </ol>
+
+            <h3>Listas de definición</h3>
+            <dl>
+                <dt>Elemento sin definición</dt>
+                <dt>Elemento otro sin definición</dt>
+                <dt>Elemento primero</dt>
+                <dd>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, suscipit. Distinctio quisquam itaque
+                    accusamus repudiandae tenetur quibusdam voluptas aperiam voluptatum eum provident nostrum reiciendis
+                    perspiciatis pariatur inventore obcaecati, sed quasi?
+                </dd>
+
+                <dt>Elemento segundo</dt>
+                <dd>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit odio saepe architecto? Soluta, iste
+                    labore. Veniam, quidem! Ab autem aspernatur delectus, soluta perspiciatis fugiat aperiam alias
+                    voluptatem, quidem, accusamus ipsum!
+                </dd>
+            </dl>
+
+        </section>
+    </div>
+
+    <section>
+        <h1>Texto de relleno</h1>
+        <article>
+            <h2>Agrupando contenidos</h2>
+            <p>Quibusdam sempiternum a pariatur. Expetendis id quorum singulis, quorum
+                mandaremus ut varias minim, ubi labore appellat vidisse, se dolore amet anim
+                occaecat, ubi ea relinqueret aut incididunt familiaritatem de excepteur ea
+                tempor velit aliquip, iudicem aute mentitum offendit. O quibusdam concursionibus
+                te ne magna aut velit non si qui illustriora, singulis velit officia mentitum,
+                se ne quae quamquam de quem ita incurreret in nam aute tamen ea incurreret,
+                aliqua coniunctione laborum summis appellat. Arbitror distinguantur o
+                expetendis. Qui iis cillum veniam eram e eu aliqua id nulla. Consequat et eram,
+                appellat ne occaecat te nam quamquam a ullamco nam est possumus de senserit in
+                laborum quem senserit, tempor minim nostrud, varias id qui anim incididunt,
+                appellat a incurreret. Aliqua cohaerescant litteris minim nescius, non aute eu
+                varias an an mentitum ex eiusmod quo expetendis sint fore si quem, sunt
+                cernantur eu efflorescere te nostrud ipsum arbitror nescius, incurreret sunt
+                anim nam nulla hic ipsum appellat ea quae nisi.</p>
+        </article>
+
+    </section>
+
+
+    <!--Inicia la sección para trabajar con enlaces-->
+    <section>
+        <h1>Trabajo con enlaces</h1>
+        <article>
+            <h2>Enlaces</h2>
+            <!-- Rutas absolutas y relativas-->
+            <a href="http://google.com"> Google</a>
+            <!--Esto es una ruta ABSOLUTA, Aqui estoy agregando un enlace externo a la pagina de google--><br>
+            <br>
+            <a href="./textosEspeciales.html">
+                <div><strong>Ejemplo</strong> de Textos especiales
+            </a></div>
+            <!--Esto es una ruta RELATIVA, Aqui estoy agregando un enlace interno a pagina propia del proyecto-->
+            <br>
+            <a href="./enlaces_internos.html">
+                <div><strong>Ejemplo</strong> de enlaces internos
+            </a></div>
+            <!--Esto es una ruta RELATIVA, Aqui estoy agregando un enlace interno a pagina propia del proyecto-->
+            <br>
+            <a href="./enlaces_internos.html#final">Final de enlaces internos</a>
+            <!--Aqui se esta haciendo un anclaje a un enlace interno que va directamente a la parte de la pagina donde se encuentra el id final, se esta anexando el # para indicar que es un enlace interno y se esta colocando al final de la ruta del href para indicar que al momento de ingresar al enlace interno se dirigirá directamente al id puesto-->
+            <br>
+
+            <!-- Para abrir archivos contenidos en el proyecto usando referencias-->
+            <a href="./assets/24FortalezasGMG.pdf">Abrir PDF</a>
+            <!--Esto es una ruta RELATIVA, Aqui estoy agregando un enlace interno a un PDF que esta en la carpeta del proyecto-->
+            <br>
+            <a href="./assets/tareaBoda.pptx">Abrir PPT</a>
+            <!--Esto es una ruta RELATIVA, Aqui estoy agregando un enlace interno a un PPT que esta en la carpeta del proyecto, como el navegador NO puede abrir este tipo de archivos entonces se procede a descargarlo-->
+            <br>
+            <a href="./assets/gato.jpeg" target="_blank">Abrir Imagen en varias pestañas por cada clic</a>
+            <!--Esto es una ruta RELATIVA, Aqui estoy agregando un enlace interno a una imagen que esta en la carpeta del proyecto y TAMBIEN estoy utilizando el atributo target para decidir de que ventana estoy hablando _blank, _parent, _self, _top. Aqui blank me esta abriendo la imagen en otra ventana-->
+            <br>
+            <a href="./assets/gato.jpeg" target="imagen">Abrir Imagen y dirigir siempre a la ventana ya antes
+                abierta</a>
+            <!--Aqui se esta creando nuestra propia opcion de target, al dar clic se abrira una nueva pestaña asociada al nombre imagen y cada que haga clic a una imagen que tenga de referencia al target imagen (en este caso es imagen) nos abrira en la misma pestaña y no nos estará abriendo pestañas cada que le demos clic-->
+            <br>
+
+            <!-- Para generar mail-->
+            <a href="mailto:mimail@dom.com">Envía un mail</a>
+            <!--Aqui se da la opción de generar un mail, esta etiqueta hace que al dar clic se nos abra la aplicación por defecto de correo del ordenador, para poder abrir directamente y mandar un mail se requiere hacer una conexión con el BackEnd-->
+            <br>
+
+            <!-- Para hacer llamadas-->
+            <a href="tel:9991178822">Llama por telefono</a>
+            <br>
+
+            <!-- Para agregar imagenes como enlaces-->
+            <a href="./assets/gato.jpeg" target="_blank"> Soy un enlace a otra página, dame clic o al gatito de
+                abajo<br>
+                <img src="./assets/gato.jpeg" alt="imagen de gatito" width="100px" height="100px">
+            </a>
+            <!--Aqui se esta poniendo una imagen como enlace a una nueva pestaña, se le dio una medida de 100*100 a la imagen, se le dio un texto a mostrar en caso de que no haya la imagen mediante el atributo "alt"-->
+
+
+        </article>
+    </section>
+    </section>
+
+    <!--Inicia la sección para trabajar con etiquetas de imagenes-->
+    <section>
+        <h1>IMAGENES Y HTML</h1>
+        <article>
+            <h2>Etiquetas de imagen</h2>
+            <img src="./assets/gato.jpeg" width="300px" height="300px" alt="Gato" title="Gato con sombrero" />
+            <!--Esta es una imagen obtenida desde directorio interno y puedo modificar las dimensiones en pixeles con los parametros width y hight. Con la propiedad alt para dar una información de la imagen, sirve para cuando el navegador no puede cargar imagenes o se tienen una configuración de no mostrar imagenes. El atributo title tambien es bueno anexarlo para dar información al usuario, en este caso para que al pasar raton encima de información-->
+
+            <h2>Imagenes de fondo</h2>
+            <div id="imagen_fondo"></div>
+
+            <h2>Iconos</h2><!--No salio esta practica :(-->
+            <div class="contenedor-icono">
+                <a href="#">Ver fotos<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-image-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z" />
+                    </svg></a>
+            </div>
+
+            <h2>Mapas de imagen</h2> <!--No salio esta practica :(-->
+            <img src="./assets/gato.jpeg" width="400" usemap="gato" />
+            <map name="gato">
+                <area alt="gatooArriba" title="gatoo" href="gatoSuperior.html" shape="rect" coords="0,0,450,150">
+                <area alt="gatooAbajo" title="gatooAbajo" href="gatoInferior.html" shape="rect"
+                    coords="140,150,450,338">
+            </map>
+
+            <h2>Imagenes HTML5</h2>
+            <picture>
+                <source srcset="./assets/gato.jpeg" media="(min-width:600px)">
+                <source srcset="./assets/gato.jpeg" media="(max-width:480px)">
+            </picture>
+
+        </article>
+    </section>
+
+    <section>
+        <h1>Tablas y estructuras complejas</h1>
+        <article>
+            <h2>Tablas</h2>
+            <table> <!--Aqui estoy indicando que inicio una tabla-->
+                <!--ESTO ES UN ENCABEZADO-->
+                <thead><!--Aqui estoy indicando que abro una FILA pero de tipo ENCABEZADO para la tabla-->
+                    <th>Titulo 1</th><!--Aqui estoy abriendo filas para agregar datos de tipo ENCABEZADO-->
+                    <th>Titulo 2</th><!--Se puede diferenciar del resto pq lo pone en negritas por defecto-->
+                    <th>Titulo 3</th>
+                </thead>
+                <!--ESTO ES EL CUERPO DE LA TABLA SIN ENCABEZADO-->
+                <tbody><!--Esta es la estructura para indicar que es el cuerpo de la tabla SIN encabezados-->
+                    <tr class="col1">
+                        <!--Aqui estoy abriendo una fila para agregar posterior mente los datos en columnas-->
+                        <td>Elemento 1</td>
+                        <!--Esto es una columna, observar la previsualizacion para entender mejor la distribución-->
+                        <td>Elemento 2</td><!--Estas filas pueden tener imagenes u otros archivos-->
+                        <td>Elemento 3</td>
+                    </tr>
+                    <tr> <!--Aqui estoy abriendo una segund para agregar posterior mente los datos en columnas-->
+                        <td>Elem. 1</td>
+                        <td>Elem. 2</td>
+                        <td>Elem. 3</td>
+                    </tr>
+                    <tr> <!--Aqui estoy abriendo una segund para agregar posterior mente los datos en columnas-->
+                        <td>Elem. 1</td>
+                        <td>Elem. 2</td>
+                        <td>Elem. 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+
+    <section>
+        <article>
+            <h2>Iframes</h2>
+            <iframe src="enlaces_internos.html"></iframe>
+        </article>
+
+        <!--Esto ya NO se utiliza
+        <article>
+            <frameset> 
+                <frame src = "pag1.html">
+            </frameset>
+        </article>-->
+    </section>
+
+
+    <!--INICIA SECCION DE FORMULARIOS-->
+    <section>
+        <!--TITULO PARA FORMULARIO-->
+        <h1>Formulario</h1>
+        <!--El atributo "action" me permite enlazar con u servidor remoto para enviar mis datos, es decir la conexión con el back-end-->
+        <form action="http://midominio.com/miservicioWeb.php" method="post"> <!--El metodo get es para enviar datos-->
+            <!--Esta etiqueta "fieldset" es un contenedor de campos y puedo definir un grupo de campos (todos los input que esten dentro de mi fieldset) dentro del formulario, a este contenedor se le pueden aplicar margenes y otros estilos-->
+            <fieldset>
+                <!--Se le puede agregar un legend, el cual es un titulo que se le poner al contenedor de campos, es diferente a un titulo h# ya que este esta ligado directamente al contenedor-->
+                <legend>Datos de usuario</legend>
+                <!--Es importante definir que va tener mi formulario, lo ideal es usar un label-->
+                <!--Se debe relacionar el label con el campo que se va a llenar mediante el atributo "for" y el name del input-->
+                <label for="nombre">Nombre:</label>
+
+                <!--Lo ideal es poner el mismo nombre al name y al id para identificarlo mejor-->
+                <!--El atributo type es el que me va permitir saber que tipo de entrada voy a tener-->
+                <!--El atributo placeholder permite mostrar un texto antes de ingresar datos, sirve para guiar al usuario-->
+                <!--El atributo requiered obliga a que se tenga que llenar este input para poder enviar el formularip-->
+                <!--El atributo readonly permite que sea de solo lectura y no se pueda editar el campo-->
+                <!--El atributo disabled permite que sea de solo lectura y no se pueda editar el campo, puede servir por ejemplo para limitar y que si hay campos que no se han llenado estos se llenen y solo entonces pueda pasar a editar el campo-->
+                <!--Con el atributo autofocus podemos elegir un campo que sea el primero en seleccionarse-->
+                <input name="nombre" id="nombre" type="text" placeholder="Ingresa tu nombre completo" required readonly
+                    autofocus />
+                <br />
+
+                <label for="apellidos">Apellido Paterno:</label>
+                <input name="apellidos" id="apellidos" type="text" placeholder="Ingresa primer apellido" />
+                <br />
+
+                <label for="apellidos">Apellidos Materno:</label>
+                <input name="apellidos" id="apellidos" type="text" placeholder="Ingresa segundo apellido" />
+                <br />
+
+                <!--Validación en HTML5-->
+                <!--El atributo requiered obliga a que se tenga que llenar este input para poder enviar el formulario-->
+                <!--Se puede hacer una verificación externa mediante JavaScript en lugar del requiered-->
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email" required />
+                <br />
+
+                <!--Al cambiar el atributo "type" de "text" a "password" me permite indicar que es contraseña y NO me muestra los datos ingresados-->
+                <label for="clave">Contraseña:</label>
+                <input name="clave" id="clave" type="password" placeholder="Ingresa tu contraseña" />
+
+                <!--Este atributo no cambia mucho visualmente de text, los botones de subir y bajar ayudan en las versiones moviles para evitar desplegar un teclado para escribir-->
+                <!--Puedo definir el numero maximo(max), el numero minimo(min) y el aumento (step)-->
+                <!--Puedo tambien darle un valor iniciar al input con el atributo "value", si se modifica y se actualiza ya nos e regresa el valor inicial-->
+                <input type="number" value="7" min="6" max="20" step="2" />
+
+                <br />
+                <!--Este atributo es como number pero es mas interactivo-->
+                <!--Puedo definir el numero maximo(max), el numero minimo(min) y el aumento (step)-->
+                <input type="range" min="1" max="30" step="1" />
+                <br />
+
+                <!--Este atributo permite seleccionar una fecha desde un calendario desplegable y tambien se puede ingresar manualmente-->
+                <input type="date" />
+                <br />
+
+                <!--Este atributo permite guardar una url, no se diferencia visualmente de text, la ventaja es que a la hora de validar datos será mas facil identificando correctamente el type a que todos sean type text-->
+                <input type="url" />
+                <br />
+
+                <!--Me permite seleccionar un color, puede servir para aplicar una personalización a un item o producto-->
+                <input type="color" />
+                <br />
+
+                <!--Este atributo me permite seleccionar un archivo desde la computadora, y con un metodo PUT se envian los datos al servidor, puedo delimitar el tipo de archivo a subir con el atributo "accept", en algunas extensiones de archivos falla un poco dependiendo del navegador o el sistema operativo-->
+                <input type="file" accept="jpeg" />
+                <br />
+
+                <!--Este atributo me permite poner campos ocultos o vacios-->
+                <!--Esto puede servir para enviar información al backEnd que es importante para nuestra aplicación de servidor pero para el usuario no lo es, Puedo enviar datos para el funcionamiento de de la aplicación sin que el usuario se percate o afecte negativamente la experiencia de usuario -->
+                <input type="hidden" name="sitio" value="contaminacion" />
+                <br />
+
+                <!---->
+                <input />
+                <br />
+
+            </fieldset>
+            <!--FINALIZA CONTENEDOR FIELDSET-->
+
+            <fieldset>
+                <legend>Otros datos</legend>
+                <label for="comentarios">Comentarios</label>
+                <!--Este es otro campo propio de formulario por ejemplo textarea, que sirve para ingresar una gran cantidad de texto-->
+                <!--Podemos darle parametos para configurar su contenido y apariencia desde aqui pero es mejor hacerlo desde CSS-->
+                <!--Se puede utilizar el atributo wrap que sirve para definir como se tienen que partir las lineas y palabras, podemos aplicarle diversos aspectos CSS-->
+                <textarea name="comentarios" id="comentarios"
+                    wrap="hard">En la etiqueta "textarea" tambien puedo ingresar información. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusantium molestiae recusandae esse aut soluta, dolore tempore nesciunt doloremque quasi eum illum iusto nisi hic consectetur similique quis voluptatibus libero?</textarea>
+                <br />
+
+
+                <!--CHECKBOX-->
+
+                <label for="envio_email">Enviar mails</label>
+                <!--Se esta agregando un checkbox para simular la selección de email como un metodo de verificación-->
+                <!--Se esta enlazando el label compartiendo el mismo nombre del for, name y id, esto permite que se pueda marcar el checkbox seleccionando el texto del label, esto mejor la experiencia del usuario por ejemplo en versiones moviles-->
+                <input name="envio_email" id="envio_email" type="checkbox" />
+
+                <!--Se pueden tener mas metodos de verificación por lo que se agrega el campi de llamar por telefono y se pueden seleccionar ambos campos al mismo tiempo sin que haya problema-->
+                <label for="llamar_tel">Llamar por telefono</label>
+                <!--Podemos hacer que alguno de los checkbox aparezca por defecto seleccionado para el usuario, esto mediante el atributo checked-->
+                <input name="llamar_tel" id="llamar_tel" type="checkbox" checked />
+                <br />
+
+
+                <!--En esta ocasion se esta enlazando estos tres checks mediante el mismo name "color", esto nos permite hacer una UNICA selección de check que queremos y asi no poder elegir mas de uno, si le cambiamos el name a alguno de los otros entonces se sale de la intención deseada-->
+                <label for="rojo">Rojo</label>
+                <!--Se vincula el label con el input mediante for y id-->
+                <!--Estas casillas (radio) de verificación salen como circulos en lugar de cuadrados, pero se pueden modificar las formas con CSS-->
+                <input name="color" id="rojo" value="rojo" type="radio" />
+
+                <label for="verde">Verde</label>
+                <input name="color" id="verde" value="verde" type="radio" checked />
+
+                <label for="azul">Azul</label>
+                <input name="color" id="azul" value="azul" type="radio" />
+                <br />
+                <!--FINALIZA CHECKBOX-->
+
+                <!--MENUS DESPLEGABLES-->
+
+                <label for="paises">Selecciona tu País</label>
+                <!--Se enlaza el label con el menu desplegable-->
+                <select name="paises" id="paises">
+                    <!--El valor entre option son las opciones que se va mostrar en el menu desplegable-->
+                    <!--El valor de value es un codigo y es el que nos va servir para enviar al backend y realizar los procesos pertinentes-->
+                    <!--Podemos tener una agrupación o categorias en el menu desplegable, se verá en negritas y este titulo de la agrupacion o categoría no se podrá seleccionar-->
+                    <!--Aqui abro una agrupación-->
+                    <optgroup label="Europa">
+                        <option value="es">España</option>
+                        <option value="fr">Francia</option>
+                    </optgroup>
+                    <!--Aqui cierro una agrupación-->
+                    <!--Aqui abro una agrupación-->
+                    <optgroup label="América">
+                        <option value="mx" selected>México</option><!--Selecciono un valor inicial por defecto-->
+                        <option value="ca">Canadá</option>
+                        <option value="eu">Estados Unidos</option>
+                    </optgroup>
+                    <!--Aqui cierro una agrupación-->
+                </select>
+                <!--FINALIZA MENUS DESPLEGABLES-->
+                <br />
+                <br />
+
+                <!--DATALIST-->
+
+                <!--Estos datalist me permiten seleccionar datos de "una lista", y al estar escribiendo muestra las sugerencias si coinciden letras con las option, NO MUESTRA UN MENU DESPLEGABLE-->
+                <label for="ciudad">Ciudad</label>
+                <input name="ciudad" id="ciudad" list="nombre_ciudades" />
+
+                <datalist id="nombre_ciudades">
+                    <option value="campeche"></option>
+                    <option value="cdMex"></option>
+                    <option value="jalisco"></option>
+                    <option value="merida"></option>
+                    <option value="victoria"></option>
+                </datalist>
+                <!--FINALIZA DATALIST-->
+
+            </fieldset>
+            <!--FINALIZA CONTENEDOR FIELDSET-->
+
+            <!--BOTONES EN HMTL QUE SIRVEN PARA ENVIAR INFORMACIÓN-->
+            <!--Este tipo button sirve como un boton-->
+            <input type="button" />
+            <br />
+            <!--Si quiero enviar los datos de formulario utilizo el tipo submit-->
+            <!--Este tipo de entrada pone automaticamente un boton en el navegador que tiene una leyenda de enviar o enviar consulta dependiendo del navegador y el idioma que se tenga seleccionado, estos datos se envían mediante el metodo "post" marcado en el inicio del formulario en donde nosotros mediante el atributo action le decimos al formulario a donde va a mandar los datos (revisar el inicio del formulario): form action="http://midominio.com/miservicioWeb.php" method="post"-->
+            <!--Este boton debe estar DENTRO DEL FORMULARIO para que sepa cual información enviar-->
+            <!--Podemos cambiarle el texto por defecto y poner uno que queramos mediante el atributo value-->
+            <!--Este envio de datos no requiere de JavaScript-->
+            <input type="submit" value="Enviar Formulario" />
+            <!--Se puede hacer una verificación externa mediante JavaScript en lugar del requiered, para esto en lugar de tupo submit se pondría como tipo button y al presionarse ese boton podemos enlazar con JavaScript para que mediante un codigo se haga ña verificaicón de los datos o la estructura y posteriormente enviar el formulario-->
+
+            <!--Este es otro boton, nos sirve para limpiar los datos llenados del formularios y deja todo en el estado inicial-->
+            <input type="reset" value="Borrar Formulario" />
+
+            <!--Boton configurable-->
+            <!--Puedo agregar un boton y designarle alguna de las funciones mencionadas anteriormente como enviar datos del formulario o limpiar el formulario, Aqui se le puede agregar texto entre las etiquetas, se le puede agregar imagenes o cualquier otro tipo de elemento ademas de texto, es mas personalizable-->
+            <button type="submit">Enviar con button</button>
+
+        </form>
+        <!--FINALIZA FORMULARIO-->
+    </section>
+    <!--FINALIZA SECCION DE FORMULARIOS-->
+
+    <!--AUDIO EN HMTL-->
+    <section>
+        <h1>Multimedia</h1>
+        <article>
+            <h2>Audio</h2>
+            <!--La etiqueta audio es la que nos va permitir jalar los archivos de audio a utilizar-->
+            <!--ES IMPORTANTE QUE EL USUARIO DECIDA SI QUIERE TENER AUDIO Y NO ACTIVARLO DE PRINCIPIO, esto lo hacemos con "control"-->
+            <!--"control" nos permite pausar, modificar volumen y ver el estado de avance del audio, varia la presentación de acuerdo al navegador y podemos mediante CSS darle una mejor vista-->
+            <!--Tambien puedo hacer que el audio se reproduzca automaticamente con "autoplay"-->
+            <!--Con "loop" hacemos que el audio se mantenga reproduciendo-->
+            <!--Con "muted" hacemos que el audio este apagado al entrar a la pagina y se active posteriormente-->
+            <!--Con "preload" hacemos que el audio este disponible antes de haberse llamado-->
+            <audio controls>
+                <!--Audio requiere que mediante SOURCE se busque el archivo de audio mediante src-->
+                <!--Se le debe indicar el type de archivo que estamos manejando y el navegador seleccione el que pueda manejar-->
+                <source src="./assets/bbc_caves--cav_07072005.mp3" type="audio/mpeg">
+                <!--Podria poner el mismo archivo pero con otras extensiones para que se reproduzca en los navegadores que no son compatibles con otros formatos-->
+            </audio>
+
+            <h2>Video</h2>
+            <!--La etiqueta video es la que nos va permitir jalar los archivos de audio a utilizar-->
+            <!--Al igual que en audio, se requiere manejar los formatos y referencias de los videos para ser lo mas compatible posible con los navegadores-->
+            <!--Tambien puedo controlar si quiero que se reproduzca de inicio y demas como con el audio-->
+            <!--Se puede utilizar la propiedad width para modificar en ancho pero eso podria ser contraproducente si el video es grande ya que no se va a apreciar-->
+            <!--Puedo ponerle un widht de 100% para que se ajuste automaticamente al ancho de la ventana-->
+            <!--"control" nos permite pausar, poner en pantalla grande, modificar volumen y ver el estado de avance del audio, varia la presentación de acuerdo al navegador y podemos mediante CSS darle una mejor vista-->
+            <!--Como los videos pueden tardar en cargar, tenemos el atributo "poster" que nos permite seleccionar una imagen que nos sirve para que se visualice algo durante el tiempo que carga el video, hay que buscar mediante referencia en donde tengamos esa imagen, como las miniaturas de youtube-->
+            <!--Hay que evitar poner videos muy pesados pq hacer que la pagina tarde en cargar, lo ideal es hacer referencias a Youtube u otros servicios de video para que no se cargue nuestra pagina y no se cargue el ancho de banda-->
+            <video width="100%" controls poster="./assets/gato.jpeg">
+                <!--Los formatos .mp4 y .webm son los mas compatibles con los navegadores modernos-->
+                <!--Se le debe indicar el type de video como se muestra a continuación en los type = -->
+                <source src="./assets/video-mp4.mp4" type="video/mp4">
+                <source src="./assets/video-webm.webm" type="video/webm">
+            </video>
+
+            <h2>Canvas</h2>
+            <!--Hay que definir un espacio de trabajo de alto y ancho-->
+            <!--Esto se utiliza en conjunto con JavaScript-->
+            <canvas id="micanvas" width="450" height="300">
+            </canvas>
+
+            <h2>Objetos</h2>
+            <!--La etiqueta objetos permite crear objetos, objetos que van a funcionar con plugin instalados dentro del navegador como por ejemplo el plugin muy conocido flash que es para cargar archivos swf, se requiere una referencia sobre ese archivo que se tiene que cargar, se especifica con el atributo type. Tambien se agrega contenido alternativo para el caso que no se tenga el plugin instalado-->
+            <object data="move.swf" type="application/x-shockwave-flash">
+                <param name="foo" value="bar">
+            </object>
+
+        </article>
+    </section>
+    <!--AQUI TERMINA LA SECCIÓN DE AUDIO EN HTML-->
+
+    <!--D-->
+
+
+    <br />
+    <a href="https://www.flaticon.es/iconos-gratis/desarrollo-de-software"
+        title="desarrollo de software iconos">Desarrollo de software iconos creados por juicy_fish - Flaticon</a>
+
+    <footer>
+        &nbsp; MAGG95 &copy;
+    </footer>
+
+    <!--Aqui termino de añadir conexión-->
+    <!--Los documentos de Script(JS) van antes del cierre del body-->
+    <script src="./javaScript.js"></script> 
+    <!--Aqui estoy añadiendo la conexión para lis archivos .js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
